@@ -1,0 +1,12 @@
+Just fyi there's a lot of this that can be skipped now, as @getas12 linked to the create react app that facebook has created so you don't have to sort out webpack and all that stuff, here's a super quick way to get set up and started (i know it's not gna include everything, but it'll get a react-redux structure up and running for you...
+
+First if you haven't already run "npm install -g create-react-app"  this gives you the ability to create react apps with one line of code..
+Secondly create a react app by navigating to the folder in which you want it to be (eg Sites) and run "create-react-app app-name" replacing app-name with the name of your app, this will be the name of the project folder. Anywhere you see app-name in these instructions, replace with your app name.
+then "cd app-name" and "npm i redux --save"  and "npm i react-redux —save" these are the two essentials for getting react and redux working together.
+For good project setup cd into src and run "mkdir actions components reducers" to set up folders to separate out the code nicely, then create a store.js in the src folder.
+
+Following all this cd back up to your project folder and run "npm start" to see your app at http://localhost:3000
+For deployment ready, minified code run "npm run build" this creates the code in a build folder.
+
+For more info read here https://github.com/facebookincubator/create-react-app
+ 
