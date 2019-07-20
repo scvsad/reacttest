@@ -1,0 +1,81 @@
+new home page design - h5
+Added by Michael Day over 1 year ago. Updated 12 months ago.
+
+Status:
+New
+Priority:
+Normal
+Assignee:
+-
+Start date:
+07/19/2016
+Due date:
+% Done:
+0%
+
+Quote
+Description
+
+Use Android Studio/Xcode/ReactJ to develop a page based on the provided mock up page and REST API; make it be compatible with mobile browser (safari, chrome)
+
+REST API to get the city list https://api-qa.goopter.com/api/v7/city?lan=en&cntry=1
+REST API to get the store short cut list(the icons on the top portion): https://api-qa.goopter.com/api/v7/hs?city=1&lan=en
+REST API to get the banner list: https://api-qa.goopter.com/api/v7/hlst?latlon=49.213366,-122.988651&lan=en&page=1&limit=20&city=1&c_id=1
+Note: you need to add -H "Accept: application/json” in order to return json format.
+
+image base URL: https://res.cloudinary.com/goopter
+
+Requirements: 
+]# able to parse JSON from the above REST API calls and extract necessary info to display on the page;
+able to re-layout the banner if there's space between the banners
+Bonus: tap the right top corner icon to show the change language option to switch to English or Chinese, after the language is chosen, call the banner API to get corresponding language of the banner
+the home page shortcut API return fields:
+
+property name    type    description
+cid    int    store category id
+sid    int    store sub category id, optional, do not return if it's not for openning a subcategory from home page
+seq    int    the display sequence
+gid    int    store id if it's for openning a particualr store (optional, do not return this field if it's not for opening a particular store)
+name    string    the store type name, i.e. restaurant, shopping, groupsale etc.
+img    string    image url
+home page banner API return fields:
+
+Output:
+
+Property name    Type    Data type    Description
+g_id    API&local    int    Group id for store
+c_id    API&local    int    Store category id
+p_id    API&local    int    Only used for group sale and product type banner, the product id
+i_url    API&local    string    url to image
+s_cnt    API&local    int    product sold count, optional, only available for product type banner
+rank    API&local    int    Rating of the item
+city    API&local    string    The location of the item
+width    API&local    int    Banner width, 1, 2, 4
+pc    API&local    decimal    the current price of the product, optional, only available for group sale and product type banner
+o_pc    API&local    decimal    the original price of the product, optional, only available for group sale and product type banner
+name    API&local    string    Name of the item, mandatory
+desc    API&local    string    the short description of the item, optional
+latlon    API&local    string    the latitude and longitude of the store(optional), if provided then display the distance to the store
+hot    hot indicator    1    Optional, default to 0
+f_id    API&local    int    banner type and defines the way how a store format banner should be opened
+0 - open the store product list page(i.e. open a store);
+1- open the store info page;
+2 - open the one page product page which allows user to direct checkout without loading store;
+3- open the group sale page product page which allows user to direct checkout;
+
+Edit
+homepage-with-language-selection.PNG (2.99 MB)  Delete Michael Day, 07/19/2016 08:13 PM
+
+homepage-vancouver.PNG (4.03 MB)  Delete Michael Day, 07/19/2016 08:13 PM
+
+homepage-durham.PNG (4.12 MB)  Delete Michael Day, 07/19/2016 08:13 PM
+
+i_home.png (1.05 KB)  Delete Michael Day, 08/08/2016 11:11 AM
+
+i_hot.png (1.1 KB)  Delete Michael Day, 08/08/2016 11:11 AM
+
+i_order.png (529 Bytes)  Delete Michael Day, 08/08/2016 11:12 AM
+
+i_my_account.png (1.03 KB)  Delete Michael Day, 08/08/2016 11:13 AM
+
+goopter_logo_white.png (20.8 KB)  Delete Michael Day, 08/08/2016 11:15 AM
